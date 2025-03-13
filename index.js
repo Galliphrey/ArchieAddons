@@ -1,7 +1,7 @@
 import Settings from './config';
 import { GRAY, RESET, BOLD, DARK_PURPLE, GOLD, LIGHT_PURPLE } from './misc/formatting';
 import './features/flareTimer'
-
+import './features/slayerTime'
 
 register("gameload", (user) => {
     ChatLib.chat(`
