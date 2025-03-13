@@ -1,0 +1,15 @@
+
+[features]
+
+	[features.notifiers]
+		flare_timer = true
+		notifier = false
+
+	[features.testing]
+		percent_slider = 0.0
+
+[slayers]
+
+	[slayers.timers]
+		slayer_kill_time = false
+

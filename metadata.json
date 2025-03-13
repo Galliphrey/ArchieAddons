@@ -1,0 +1,8 @@
+{
+  "name": "ArchieAddons",
+  "creator": "Archie",
+  "description": "Module designed to give PEAK Gameplay!",
+  "entry": "index.js",
+  "version": "1.0.0",
+  "requires": ["Vigilance"]
+}
