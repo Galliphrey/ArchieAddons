@@ -39,6 +39,15 @@ class Settings {
     })
     jawbusMessageHider = false
 
+    @SwitchProperty({
+    name: "Slayer Boss ESP",
+    description: "Renders a ESP-Box around YOUR Slayer Boss.",
+    category: "Slayer",
+    subcategory: "Visuals",
+    placeholder: "Activate"
+    })
+    slayerEspBox = false
+
 
     constructor() {
         this.initialize(this);

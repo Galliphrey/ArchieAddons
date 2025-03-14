@@ -2,6 +2,7 @@ import Settings from './config';
 import { GRAY, RESET, BOLD, DARK_PURPLE, GOLD, LIGHT_PURPLE } from './misc/formatting';
 import './features/flareAlert'
 import './features/jawbusDeathMessageRemover'
+import './features/esp-boxrender/slayerEspRender'
 
 
 register("gameload", (user) => {
