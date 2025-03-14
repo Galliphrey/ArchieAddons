@@ -13,9 +13,6 @@ register('actionBar', () => {
                     flareActive = false;
                     Client.showTitle(`${RED}Your Flare is about to expire!`, "", 0, 40, 10)
                 });
-                sleep(180000, () => {
-                    Client.showTitle(`${DARK_RED}Your Flare has expired!`, "", 0, 40, 10)
-                })
             }   
         }
     }
