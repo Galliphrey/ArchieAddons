@@ -17,7 +17,7 @@ register('actionBar', () => {
         }
     }
 }).setCriteria(/.+\(Deploy\).+/);
-console.log('ARCHIES SUPA COOL FLARE TIMER TITLE HAS BEN LOADEDEDEDED!!!!')
+console.log('Skaro >>> Flare Alert Loaded.')
 
 //export default flareTimer;
 //function flareTimer() {};
