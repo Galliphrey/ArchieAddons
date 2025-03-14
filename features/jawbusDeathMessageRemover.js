@@ -1,13 +1,10 @@
 import Settings from '../config';
-register('chat', (event) => {
-    let message = ChatLib.getChatMessage(event, true); // Get the message
-
-    if (Settings.jawbusMessageHider) { // Ensure the setting is enabled
+register('chat', (message, event) => {
+    if (Settings.jawbusMessageHider) {
         if (message && message.toLowerCase().includes("was killed by lord jawbus")) {
-            cancel(event); // Cancel the message
-            ChatLib.chat("HEHE"); // Confirm cancellation
-            print("[DEBUG] Blocked message: " + message);
+            cancel(event);
+            ChatLib.chat("HEHE");
         }
     }
-}).setPriority(Priority.HIGHEST);
+})
 console.log('Skaro >>> JawbusMessageHider Loaded.')
