@@ -30,15 +30,6 @@ class Settings {
     })
     flareTimerAlert = false
 
-    @SwitchProperty({
-        name: 'Slayer Kill Time',
-        description: 'Gets slayer kill time. (Might be a little inaccurate)',
-        category: 'Slayers',
-        subcategory: 'Timers',
-    })
-    slayerKillTime = false;
-
-
     constructor() {
         this.initialize(this);
     }
