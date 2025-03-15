@@ -2,7 +2,7 @@ import Settings from './config';
 import { BOLD, GOLD, LIGHT_PURPLE, RESET, DARK_GRAY, WHITE, ITALIC, GREEN, RED } from './misc/formatting';
 import './features/flareAlert'
 import './features/jawbusDeathMessageRemover'
-import './features/esp-boxrender/jawbusEspRender'
+import './features/esp-boxrender/entityEspRender'
 
 // Resource pack copying
 const File = Java.type("java.io.File");
@@ -49,7 +49,6 @@ function copyResourcePack() {
     }
 }
 
-
 const welcomeMessage = new TextComponent(`\n${BOLD}${GOLD}[${LIGHT_PURPLE}ArchieAddons${GOLD}]${RESET} Loaded!${RESET}`).setHoverValue(`Click to open the ArchieAddons GUI.`).setClick("run_command", "/archieaddons");
 
 register("gameload", (user) => {
@@ -62,9 +61,7 @@ register("command", (user) => {
 }).setName("archieaddons").setAliases("notarat","aa","skaro");
 
 register("command", (user) => {
-    let entityListESP = Settings.espList;
-    let listArrayESP = entityListESP.split(",");
-    listArrayESP.forEach(item => ChatLib.chat(item));
+    // none rn
 }).setName("testcode");
 
 register("command", (user) => {
