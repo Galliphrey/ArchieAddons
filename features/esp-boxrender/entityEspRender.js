@@ -3,6 +3,11 @@ import Settings from '../../config';
 import RenderLibV2 from '../../../RenderLibV2'
 
 // need to make entities work as an array so i can add multiple entities to the esp list
+let entityListESP = Settings.espList;
+let listArrayESP = entityListESP.split(",");
+listArrayESP.forEach(item => print(item));
+
+
 const targetEntities = ["dummy", "old wolf", "milenia-aged blaze"];
 const Color = Java.type("java.awt.Color");
 const colours = [
@@ -14,7 +19,8 @@ const colours = [
     RenderLibV2.getColor(Color.YELLOW),
     RenderLibV2.getColor(Color.ORANGE),
     RenderLibV2.getColor(Color.WHITE),
-    RenderLibV2.getColor(Color.BLACK)
+    RenderLibV2.getColor(Color.BLACK),
+    RenderLibV2.getColor(Color.PINK)
 ]
 
 // have these set to certain values based on the entity

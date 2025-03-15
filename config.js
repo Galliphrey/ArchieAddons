@@ -29,7 +29,7 @@ import './misc/formatting';
 class Settings {
 
     @SwitchProperty({
-        name: `${DARK_RED}${BOLD}Flare ${RESET}Timer`,
+        name: `${RED}${BOLD}Flare ${RESET}Timer`,
         description: "Makes a title when your flare expires",
         category: "Fishing",
         subcategory: "Notifiers",
@@ -82,15 +82,6 @@ class Settings {
     })
     corpseEspBox = false
 
-    @SelectorProperty({
-        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Colour`,
-        description: "Select the colour of the ESP-Box.",
-        category: "ESP",
-        subcategory: "Settings",
-        options: ['Magenta', 'Red', 'Cyan', 'Blue', 'Green', 'Yellow', 'Orange', 'White', 'Black'],
-    })
-    espColour = 0;
-
     @PercentSliderProperty({
         name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Thickness`,
         description: `Select Thickness for your ESP-Box.\n${UNDERLINE}Each 10% is 1 Pixel`,
@@ -99,9 +90,18 @@ class Settings {
     })
     espThickness = 0.0;
 
+    @SelectorProperty({
+        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Colour`,
+        description: "Select the colour of the ESP-Box.",
+        category: "ESP",
+        subcategory: "Settings",
+        options: ['Magenta', 'Red', 'Cyan', 'Blue', 'Green', 'Yellow', 'Orange', 'White', 'Black', 'Pink'],
+    })
+    espColour = 0;
+
     @TextProperty({
         name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Entities`,
-        description: `Type in entities to add to the Entity ESP feature.\n${UNDERLINE}Separate with commas ()`,
+        description: `Type in entities to add to the Entity ESP feature.\n${UNDERLINE}Separate with commas.`,
         category: 'ESP',
         subcategory: 'who?',
         placeholder: `jawbus,old wolf,milenia-aged blaze`,
@@ -115,3 +115,4 @@ class Settings {
 };
 
 export default new Settings();
+
