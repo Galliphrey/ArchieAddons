@@ -2,7 +2,7 @@ import { EntityArmorStand } from '../../misc/entities';
 import Settings from '../../config';
 import RenderLibV2 from '../../../RenderLibV2'
 
-const targetEntity = "zombie";
+const targetEntity = "dummy";
 const Color = Java.type("java.awt.Color");
 
 register('renderWorld', () => {
@@ -14,12 +14,12 @@ register('renderWorld', () => {
                 stand.getX(),
                 stand.getY() - 2,
                 stand.getZ(),
-                1,
+                2,
+                2,
                 2,
                 1,
+                0,
                 1,
-                0,
-                0,
                 100,
                 true,
                 3
