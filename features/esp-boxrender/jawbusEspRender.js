@@ -2,8 +2,8 @@ import { EntityArmorStand } from '../../misc/entities';
 import Settings from '../../config';
 import RenderLibV2 from '../../../RenderLibV2'
 
-// colour selecting thing doesnt currently work, just goes to magenta somehow
-const targetEntities = "dummy";
+// need to make entities work as an array so i can add multiple entities to the esp list
+const targetEntities = ["dummy", "old wolf", "milenia-aged blaze"];
 const Color = Java.type("java.awt.Color");
 const colours = [
     RenderLibV2.getColor(Color.MAGENTA),
@@ -23,7 +23,7 @@ register('renderWorld', () => {
       const renderColor = colours[index];
       World.getAllEntitiesOfType(EntityArmorStand).forEach((stand) => {
           let name = stand.getName().removeFormatting().toLowerCase();
-            if (name.includes(targetEntities) && !name.includes(" 0❤")) {
+            if (targetEntities.some(entity => name.includes(entity)) && !name.includes(" 0❤")) {
               RenderLibV2.drawEspBoxV2(
                 stand.getX(),
                 stand.getY() - 3,

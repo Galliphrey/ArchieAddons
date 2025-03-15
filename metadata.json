@@ -4,5 +4,5 @@
   "description": "Module designed to give PEAK Gameplay!",
   "entry": "index.js",
   "version": "1.0.1",
-  "requires": ["Vigilance", "RenderLibV2"]
+  "requires": ["Vigilance", "RenderLibV2", "sleep"]
 }
