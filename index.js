@@ -12,7 +12,17 @@ const StandardCopyOption = Java.type("java.nio.file.StandardCopyOption");
 
 function copyResourcePack() {
     const resourcePackPath = Paths.get(new File('.').getAbsolutePath(), 'config', 'ChatTriggers', 'modules', 'ArchieAddons', '! ArchieAddons FontPack.zip'); // Path to your resource pack inside the module folder
-    const minecraftResourcePackFolder = Paths.get(new File('.').getAbsolutePath(), 'resourcepacks'); // Correct Minecraft resource pack folder within the instance
+    
+    // Determine the correct resource pack folder
+    let minecraftResourcePackFolder;
+    if (new File('.').getAbsolutePath().includes('PrismLauncher')) {
+        // Prism Launcher instance directory
+        minecraftResourcePackFolder = Paths.get(new File('.').getAbsolutePath(), 'resourcepacks');
+    } else {
+        // Default Minecraft directory
+        minecraftResourcePackFolder = Paths.get(java.lang.System.getenv("APPDATA"), '.minecraft', 'resourcepacks');
+    }
+    
     const destinationPath = minecraftResourcePackFolder.resolve('! ArchieAddons FontPack.zip'); // Destination path for the resource pack
 
     // Log paths for debugging
