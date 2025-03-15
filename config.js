@@ -42,11 +42,22 @@ class Settings {
     @SwitchProperty({
     name: "Slayer Boss ESP",
     description: "Renders a ESP-Box around YOUR Slayer Boss.",
-    category: "Slayer",
-    subcategory: "Visuals",
+    category: "ESP",
+    subcategory: "Settings",
     placeholder: "Activate"
     })
-    slayerEspBox = false
+    entityEspBox = false
+
+    @SelectorProperty({
+    name: "ESP Colour",
+    description: "Select the colour of the ESP-Box.",
+    category: "ESP",
+    subcategory: "Settings",
+    options: ['Magenta', 'Red', 'Cyan', 'Blue', 'Green', 'Yellow', 'Orange', 'White', 'Black'],
+    })
+    espColour = 0;
+
+
 
 
     constructor() {
