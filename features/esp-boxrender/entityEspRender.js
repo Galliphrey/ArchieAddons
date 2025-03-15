@@ -3,12 +3,8 @@ import Settings from '../../config';
 import RenderLibV2 from '../../../RenderLibV2'
 
 // need to make entities work as an array so i can add multiple entities to the esp list
-let entityListESP = Settings.espList;
-let listArrayESP = entityListESP.split(",");
-listArrayESP.forEach(item => print(item));
-
-
-const targetEntities = ["dummy", "old wolf", "milenia-aged blaze"];
+const entityListESP = Settings.espList.toLowerCase();
+const targetEntities = entityListESP.split(",");
 const Color = Java.type("java.awt.Color");
 const colours = [
     RenderLibV2.getColor(Color.MAGENTA),
@@ -43,11 +39,6 @@ register('renderWorld', () => {
               } else if (name.includes("old wolf" || "wolf")) {
                 // dog entity
                 width = 2;
-                height = 1;
-                depth = 1;
-              } else if (name.includes("milenia-aged blaze")) {
-                // blaze entity
-                width = 1;
                 height = 1;
                 depth = 1;
               } else if (name.includes("fels")) {

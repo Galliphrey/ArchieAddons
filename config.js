@@ -101,7 +101,7 @@ class Settings {
 
     @TextProperty({
         name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Entities`,
-        description: `Type in entities to add to the Entity ESP feature.\n${UNDERLINE}Separate with commas.`,
+        description: `Type in entities to add to the Entity ESP feature.\n${UNDERLINE}Separate with commas.\n${RED}${BOLD}/ct load to apply changes.`,
         category: 'ESP',
         subcategory: 'who?',
         placeholder: `jawbus,old wolf,milenia-aged blaze`,
