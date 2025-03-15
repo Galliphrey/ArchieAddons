@@ -1,3 +1,4 @@
+import { BOLD, DARK_GRAY, GRAY, ITALIC, LIGHT_PURPLE, RESET, UNDERLINE } from './misc/formatting';
 import {
     @ButtonProperty,
     @CheckboxProperty,
@@ -9,6 +10,7 @@ import {
     @TextProperty,
     @Vigilant,
 } from 'Vigilance';
+import './misc/formatting';
 
 
 @Vigilant('ArchieAddons', 'ArchieAddons', {
@@ -40,16 +42,16 @@ class Settings {
     jawbusMessageHider = false
 
     @SwitchProperty({
-    name: "Slayer Boss ESP",
-    description: "Renders a ESP-Box around YOUR Slayer Boss.",
+    name: `Entity ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
+    description: "Renders a ESP-Box around your selection of Entities.(Do /esp to see how to add them)",
     category: "ESP",
-    subcategory: "Settings",
+    subcategory: "who?",
     placeholder: "Activate"
     })
     entityEspBox = false
 
     @SelectorProperty({
-    name: "ESP Colour",
+    name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Colour`,
     description: "Select the colour of the ESP-Box.",
     category: "ESP",
     subcategory: "Settings",
@@ -57,6 +59,13 @@ class Settings {
     })
     espColour = 0;
 
+    @PercentSliderProperty({
+        name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Thickness`,
+        description: `Select Thickness for your ESP-Box.\n${UNDERLINE}Each 10% is 1 Pixel`,
+        category: 'ESP',
+        subcategory: 'Settings',
+    })
+    espThickness = 0.0;
 
 
 

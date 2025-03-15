@@ -3,7 +3,7 @@ import Settings from '../../config';
 import RenderLibV2 from '../../../RenderLibV2'
 
 // colour selecting thing doesnt currently work, just goes to magenta somehow
-const targetEntity = "dummy";
+const targetEntities = "dummy";
 const Color = Java.type("java.awt.Color");
 const colours = [
     RenderLibV2.getColor(Color.MAGENTA),
@@ -23,22 +23,23 @@ register('renderWorld', () => {
       const renderColor = colours[index];
       World.getAllEntitiesOfType(EntityArmorStand).forEach((stand) => {
           let name = stand.getName().removeFormatting().toLowerCase();
-          if (name.includes(targetEntity) && !name.includes(" 0❤")) {
-            RenderLibV2.drawEspBoxV2(
-              stand.getX(),
-              stand.getY() - 3,
-              stand.getZ(),
-              2,
-              3,
-              1,
-              renderColor.red,
-              renderColor.green,
-              renderColor.blue,
-              renderColor.alpha,
-              true,
-              3
-            );
-          }
+            if (name.includes(targetEntities) && !name.includes(" 0❤")) {
+              RenderLibV2.drawEspBoxV2(
+                stand.getX(),
+                stand.getY() - 3,
+                stand.getZ(),
+                2,
+                3,
+                1,
+                renderColor.red,
+                renderColor.green,
+                renderColor.blue,
+                renderColor.alpha,
+                true,
+                Settings.espThickness * 10
+              );
+            };
+          
         });
     };
 });
