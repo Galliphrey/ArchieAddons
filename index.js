@@ -26,6 +26,10 @@ register("command", (user, ...args) => {
     ChatLib.chat(`Added ${args.join(" ")} to ESP Entities.`)
 }).setName("esp Add");
 
+register("command", (user, ...args) => {
+    ChatLib.chat(`Removed ${args.join(" ")} from ESP Entities.`)
+}).setName("esp Remove");
+
 register("command", (user) => {
     ChatLib.chat(`***\n${LIGHT_PURPLE}${BOLD}ESP${GOLD} Colours${RESET}\n>>> ${DARK_GRAY}Magenta${RESET}\n>>> ${DARK_GRAY}Red${RESET}\n>>> ${DARK_GRAY}Cyan${RESET}\n>>> ${DARK_GRAY}Blue${RESET}\n>>> ${DARK_GRAY}Green${RESET}\n>>> ${DARK_GRAY}Yellow${RESET}\n>>> ${DARK_GRAY}Orange${RESET}\n>>> ${DARK_GRAY}White${RESET}\n>>> ${DARK_GRAY}Black${RESET}\n***`)
 }).setName("espcolours");
