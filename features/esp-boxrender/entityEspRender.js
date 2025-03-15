@@ -4,7 +4,8 @@ import RenderLibV2 from '../../../RenderLibV2'
 
 // need to make entities work as an array so i can add multiple entities to the esp list
 const entityListESP = Settings.espList.toLowerCase();
-const targetEntities = entityListESP.split(",");
+let array = entityListESP.split(",");
+const targetEntities = array.filter(element => element != "");
 const Color = Java.type("java.awt.Color");
 const colours = [
     RenderLibV2.getColor(Color.MAGENTA),
