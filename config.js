@@ -1,4 +1,4 @@
-import { AQUA, BLACK, BOLD, DARK_GRAY, DARK_RED, GRAY, ITALIC, LIGHT_PURPLE, RED, RESET, UNDERLINE } from './misc/formatting';
+import { AQUA, BLACK, BOLD, DARK_GRAY, DARK_RED, GRAY, GREEN, ITALIC, LIGHT_PURPLE, RED, RESET, UNDERLINE } from './misc/formatting';
 import {
     @ButtonProperty,
     @CheckboxProperty,
@@ -38,7 +38,16 @@ class Settings {
     flareTimerAlert = false
 
     @SwitchProperty({
-        name: `${DARK_RED}${BOLD}Jawbus Death ${RESET}Hider`,
+        name: `${LIGHT_PURPLE}${BOLD}Radioactive${RESET} ${GREEN}${BOLD}Vial ${RESET}Drop Alert`,
+        description: "Makes a title when you drop a Radioactive Vial",
+        category: "Fishing",
+        subcategory: "Drop Alerts",
+        placeholder: "Activate"
+    })
+    mfdropAlertVIAL = false
+
+    @SwitchProperty({
+        name: `${RED}${BOLD}Jawbus Death ${RESET}Hider`,
         description: "Hides Jawbus death messages in chat (only for you).",
         category: "Fishing",
         subcategory: "Hiders",
@@ -48,7 +57,7 @@ class Settings {
 
     @SwitchProperty({
         name: `Entity ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
-        description: "Renders a ESP-Box around your selection of Entities. (Do /esp to see how to add them)",
+        description: "Renders a ESP-Box around your selection of Entities.",
         category: "ESP",
         subcategory: "who?",
         placeholder: "Activate"

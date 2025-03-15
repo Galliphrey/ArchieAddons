@@ -1,7 +1,7 @@
 # 1.0.1
 
 *Added*
-Slayer ESP
+Entity ESP
 Jawbus Death Hider
 
 *Updated/Bug Fixes*

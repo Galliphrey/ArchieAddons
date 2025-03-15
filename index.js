@@ -2,7 +2,7 @@ import Settings from './config';
 import { BOLD, GOLD, LIGHT_PURPLE, RESET, DARK_GRAY, WHITE, ITALIC, GREEN, RED } from './misc/formatting';
 import './features/flareAlert'
 import './features/jawbusDeathMessageRemover'
-import './features/esp-boxrender/jawbusEspRender'
+import './features/esp-boxrender/entityEspRender'
 
 // Resource pack copying
 const File = Java.type("java.io.File");
