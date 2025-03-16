@@ -20,7 +20,12 @@ import './misc/formatting';
     },
     getSubcategoryComparator: () => (a, b) => {
 
-        const subcategories = ["who?", "Settings", "Notifiers", "Hiders"];
+        const subcategories = [
+            "who?",
+            "Settings",
+            "Notifiers",
+            "Hiders"
+            ];
         return subcategories.indexOf(a.getValue()[0].attributesExt.subcategory) -
             subcategories.indexOf(b.getValue()[0].attributesExt.subcategory);
     },
@@ -55,6 +60,16 @@ class Settings {
     })
     entityEspBox = false
 
+    @TextProperty({
+        name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Entities`,
+        description: `Type in entities to add to the Entity ESP feature.\n${UNDERLINE}Separate with commas.\n${RED}${BOLD}/ct load to apply changes.`,
+        category: 'ESP',
+        subcategory: 'who?',
+        placeholder: `jawbus,old wolf,milenia-aged blaze`,
+        triggerActionOnInitialization: false,
+    })
+    espList = '';
+
     @SwitchProperty({
         name: `Slayer ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
         description: "Renders a ESP-Box around your Slayer boss.",
@@ -75,12 +90,30 @@ class Settings {
 
     @SwitchProperty({
         name: `Starred Mobs ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
-        description: "Renders a ESP-Box around Stared mobs in Dungeon Runs.",
+        description: "Renders a ESP-Box around Starred mobs in Dungeon Runs.",
         category: "ESP",
         subcategory: "who?",
         placeholder: "Activate"
     })
     starmobEspBox = false
+
+    @SelectorProperty({
+        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Colour`,
+        description: "Select the colour of the ESP-Box.",
+        category: "ESP",
+        subcategory: "Settings",
+        options: ['Magenta', 'Red', 'Cyan', 'Blue', 'Green', 'Yellow', 'Orange', 'White', 'Black', 'Pink'],
+    })
+    espColour = 0;
+
+    @SelectorProperty({
+        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Style`,
+        description:`Select the Type of ESP-Box you want!`,
+        category:`ESP`,
+        subcategory:`Settings`,
+        options: ['Normal ESP-Box','Inner ESP-Box','Baritone ESP-Box','Inner Baritone ESP-Box'],
+    })
+    espType = 0;
 
     @PercentSliderProperty({
         name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Thickness`,
@@ -97,25 +130,6 @@ class Settings {
         subcategory: 'Settings',
     })
     espOpacity = 0.0;
-
-    @SelectorProperty({
-        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Colour`,
-        description: "Select the colour of the ESP-Box.",
-        category: "ESP",
-        subcategory: "Settings",
-        options: ['Magenta', 'Red', 'Cyan', 'Blue', 'Green', 'Yellow', 'Orange', 'White', 'Black', 'Pink'],
-    })
-    espColour = 0;
-
-    @TextProperty({
-        name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Entities`,
-        description: `Type in entities to add to the Entity ESP feature.\n${UNDERLINE}Separate with commas.\n${RED}${BOLD}/ct load to apply changes.`,
-        category: 'ESP',
-        subcategory: 'who?',
-        placeholder: `jawbus,old wolf,milenia-aged blaze`,
-        triggerActionOnInitialization: false,
-    })
-    espList = '';
 
     constructor() {
         this.initialize(this);

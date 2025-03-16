@@ -59,7 +59,7 @@ register('renderWorld', () => {
               };
 
 
-              RenderLibV2.drawEspBoxV2(
+              type[Settings.espType](
                 stand.getX(),
                 stand.getY() - height,
                 stand.getZ(),

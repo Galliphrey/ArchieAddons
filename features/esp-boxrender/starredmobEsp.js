@@ -20,6 +20,13 @@ const colours = [
     RenderLibV2.getColor(Color.BLACK),
     RenderLibV2.getColor(Color.PINK)
 ]
+const type = [
+    RenderLibV2.drawEspBoxV2,
+    RenderLibV2.drawInnerEspBoxV2,
+    RenderLibV2.drawBaritoneEspBoxV2,
+    RenderLibV2.drawInnerBaritoneEspBoxV2
+]
+
 
 // have these set to certain values based on the entity
 let width = 0;
@@ -58,8 +65,7 @@ register('renderWorld', () => {
                 depth = 1;
               };
 
-
-              RenderLibV2.drawInnerEspBoxV2(
+              type[Settings.espType](
                 stand.getX(),
                 stand.getY() - height,
                 stand.getZ(),
