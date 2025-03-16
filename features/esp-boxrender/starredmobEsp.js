@@ -66,9 +66,9 @@ register('renderWorld', () => {
               };
 
               type[Settings.espType](
-                stand.getX(),
-                stand.getY() - height,
-                stand.getZ(),
+                stand.getRenderX(),
+                stand.getRenderY() - height,
+                stand.getRenderZ(),
                 width,
                 height,
                 depth,

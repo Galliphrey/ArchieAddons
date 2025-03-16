@@ -24,6 +24,13 @@ const colours = [
     RenderLibV2.getColor(Color.BLACK),
     RenderLibV2.getColor(Color.PINK)
 ]
+const type = [
+    RenderLibV2.drawEspBoxV2,
+    RenderLibV2.drawInnerEspBoxV2,
+    RenderLibV2.drawBaritoneEspBoxV2,
+    RenderLibV2.drawInnerBaritoneEspBoxV2
+]
+
 
 // it works but for every boss, below are attempts ive tried to get it to only work on MY boss
 // it results in the entire thing breaking :/
@@ -68,9 +75,9 @@ register('renderWorld', () => {
                   }
     
                   type[Settings.espType](
-                    stand.getX(),
-                    stand.getY() - height,
-                    stand.getZ(),
+                    stand.getRenderX(),
+                    stand.getRenderY() - height,
+                    stand.getRenderZ(),
                     width,
                     height,
                     depth,
