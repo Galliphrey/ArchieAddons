@@ -3,7 +3,6 @@ import { BOLD, GOLD, LIGHT_PURPLE, RESET, DARK_GRAY, WHITE, ITALIC, GREEN, RED, 
 import './features/flareAlert';
 import './features/esp-boxrender/entityEspRender';
 import './features/esp-boxrender/slayerEsp';
-import './features/esp-boxrender/corpseEsp';
 import './features/esp-boxrender/starredmobEsp';
 
 
