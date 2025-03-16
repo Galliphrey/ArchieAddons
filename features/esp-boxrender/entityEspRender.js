@@ -3,9 +3,7 @@ import Settings from '../../config';
 import RenderLibV2 from '../../../RenderLibV2'
 
 // need to make entities work as an array so i can add multiple entities to the esp list
-const entityListESP = Settings.espList.toLowerCase();
-let array = entityListESP.split(",");
-const targetEntities = array.filter(element => element != "");
+
 const Color = Java.type("java.awt.Color");
 const colours = [
     RenderLibV2.getColor(Color.MAGENTA),
@@ -34,6 +32,9 @@ let depth = 0;
 
 register('renderWorld', () => {
     if (Settings.entityEspBox) {
+      const entityListESP = Settings.espList.toLowerCase();
+      let array = entityListESP.split(",");
+      const targetEntities = array.filter(element => element != "");
       let index = Settings.espColour;
       const renderColor = colours[index];
       World.getAllEntitiesOfType(EntityArmorStand).forEach((stand) => {
