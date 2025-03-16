@@ -77,7 +77,7 @@ register('renderWorld', () => {
                     renderColor.red,
                     renderColor.green,
                     renderColor.blue,
-                    renderColor.alpha,
+                    Settings.espOpacity,
                     true,
                     Settings.espThickness * 10
                   );

@@ -4,7 +4,7 @@ import './features/flareAlert';
 import './features/esp-boxrender/entityEspRender';
 import './features/esp-boxrender/slayerEsp';
 import './features/esp-boxrender/corpseEsp';
-
+import './features/esp-boxrender/starredmobEsp';
 
 // Resource pack copying
 const File = Java.type("java.io.File");
@@ -63,7 +63,8 @@ register("command", (user) => {
 }).setName("archieaddons").setAliases("notarat","aa","skaro");
 
 register("command", (user) => {
-
+    let world = World.getWorld();
+    console.log(world);
 }).setName("testcode");
 
 register("command", (user) => {
