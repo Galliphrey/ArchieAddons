@@ -20,7 +20,12 @@ import './misc/formatting';
     },
     getSubcategoryComparator: () => (a, b) => {
 
-        const subcategories = ["who?", "Settings", "Notifiers", "Hiders"];
+        const subcategories = [
+            "who?",
+            "Settings",
+            "Notifiers",
+            "Hiders"
+            ];
         return subcategories.indexOf(a.getValue()[0].attributesExt.subcategory) -
             subcategories.indexOf(b.getValue()[0].attributesExt.subcategory);
     },
@@ -47,15 +52,6 @@ class Settings {
     mfdropAlertVIAL = false
 
     @SwitchProperty({
-        name: `${RED}${BOLD}Jawbus Death ${RESET}Hider`,
-        description: "Hides Jawbus death messages in chat (only for you).",
-        category: "Fishing",
-        subcategory: "Hiders",
-        placeholder: "Activate"
-    })
-    jawbusMessageHider = false
-
-    @SwitchProperty({
         name: `Entity ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
         description: "Renders a ESP-Box around your selection of Entities.",
         category: "ESP",
@@ -63,41 +59,6 @@ class Settings {
         placeholder: "Activate"
     })
     entityEspBox = false
-
-    @SwitchProperty({
-        name: `Slayer ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
-        description: "Renders a ESP-Box around your Slayer boss.",
-        category: "ESP",
-        subcategory: "who?",
-        placeholder: "Activate"
-    })
-    slayerEspBox = false
-
-    @SwitchProperty({
-        name: `Corpse ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
-        description: "Renders a ESP-Box around Mineshaft Corpses.",
-        category: "ESP",
-        subcategory: "who?",
-        placeholder: "Activate"
-    })
-    corpseEspBox = false
-
-    @PercentSliderProperty({
-        name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Thickness`,
-        description: `Select Thickness for your ESP-Box.\n${UNDERLINE}Each 10% is 1 Pixel`,
-        category: 'ESP',
-        subcategory: 'Settings',
-    })
-    espThickness = 0.0;
-
-    @SelectorProperty({
-        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Colour`,
-        description: "Select the colour of the ESP-Box.",
-        category: "ESP",
-        subcategory: "Settings",
-        options: ['Magenta', 'Red', 'Cyan', 'Blue', 'Green', 'Yellow', 'Orange', 'White', 'Black', 'Pink'],
-    })
-    espColour = 0;
 
     @TextProperty({
         name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Entities`,
@@ -108,6 +69,67 @@ class Settings {
         triggerActionOnInitialization: false,
     })
     espList = '';
+
+    @SwitchProperty({
+        name: `Slayer ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
+        description: "Renders a ESP-Box around your Slayer boss.",
+        category: "ESP",
+        subcategory: "who?",
+        placeholder: "Activate"
+    })
+    slayerEspBox = true
+
+    @SwitchProperty({
+        name: `Corpse ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
+        description: "Renders a ESP-Box around Mineshaft Corpses.",
+        category: "ESP",
+        subcategory: "who?",
+        placeholder: "Activate"
+    })
+    corpseEspBox = false
+
+    @SwitchProperty({
+        name: `Starred Mobs ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
+        description: "Renders a ESP-Box around Starred mobs in Dungeon Runs.",
+        category: "ESP",
+        subcategory: "who?",
+        placeholder: "Activate"
+    })
+    starmobEspBox = false
+
+    @SelectorProperty({
+        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Colour`,
+        description: "Select the colour of the ESP-Box.",
+        category: "ESP",
+        subcategory: "Settings",
+        options: ['Magenta', 'Red', 'Cyan', 'Blue', 'Green', 'Yellow', 'Orange', 'White', 'Black', 'Pink'],
+    })
+    espColour = 0;
+
+    @SelectorProperty({
+        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Style`,
+        description:`Select the Type of ESP-Box you want!`,
+        category:`ESP`,
+        subcategory:`Settings`,
+        options: ['Normal ESP-Box','Inner ESP-Box','Baritone ESP-Box','Inner Baritone ESP-Box'],
+    })
+    espType = 0;
+
+    @PercentSliderProperty({
+        name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Thickness`,
+        description: `Select Thickness for your ESP-Box.\n${UNDERLINE}Each 10% is 1 Pixel`,
+        category: 'ESP',
+        subcategory: 'Settings',
+    })
+    espThickness = 0.0;
+
+    @PercentSliderProperty({
+        name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Opactiy`,
+        description: `Select Opacity for your ESP-Box.`,
+        category: 'ESP',
+        subcategory: 'Settings',
+    })
+    espOpacity = 0.0;
 
     constructor() {
         this.initialize(this);
