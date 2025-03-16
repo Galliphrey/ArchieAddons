@@ -1,7 +1,6 @@
 import Settings from './config';
-import { BOLD, GOLD, LIGHT_PURPLE, RESET, DARK_GRAY, WHITE, ITALIC, GREEN, RED } from './misc/formatting';
+import { BOLD, GOLD, LIGHT_PURPLE, RESET, DARK_GRAY, WHITE, ITALIC, GREEN, RED, GRAY, OBFUSCATED, DARK_PURPLE } from './misc/formatting';
 import './features/flareAlert'
-import './features/jawbusDeathMessageRemover'
 import './features/esp-boxrender/entityEspRender'
 
 // Resource pack copying
@@ -61,11 +60,13 @@ register("command", (user) => {
 }).setName("archieaddons").setAliases("notarat","aa","skaro");
 
 register("command", (user) => {
-    // none rn
+
 }).setName("testcode");
 
 register("command", (user) => {
     ChatLib.chat(`***\n${LIGHT_PURPLE}${BOLD}ESP${RESET} Settings\n>>> ${GOLD}Add/Remove${DARK_GRAY} Example: ' /esp Add old wolf '${RESET}\n>>> ${GOLD}List${DARK_GRAY} Example: ' /esp List '${RESET}\n***`)
 }).setName("esp");
 
+
+//     const newMessage = new Message(`${DARK_PURPLE}${OBFUSCATED}AAA${RESET}${GOLD}♆♆♆ ${RESET}${GREEN}+500 Aura${RESET} ${GOLD}♆♆♆${RESET}${DARK_PURPLE}${OBFUSCATED}AAA${RESET}`)
 // the amount of dashes to span all of chat: ----------------------------------------------------

@@ -9,3 +9,4 @@ register('chat', (message) => {
         }
     }
 }).setCriteria('You have received a Mythic Forge Drop!');
+// rip some feeshnotifier code triggers and their alert js files

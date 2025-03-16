@@ -1,0 +1,16 @@
+export const BABY_YETI_PET = "Baby Yeti";
+export const FLYING_FISH_PET = "Flying Fish";
+export const MEGALODON_PET = "Megalodon";
+export const SQUID_PET = "Squid";
+export const GUARDIAN_PET = "Guardian";
+export const LUCKY_CLOVER_CORE = "Lucky Clover Core";
+export const DEEP_SEA_ORB = "Deep Sea Orb";
+export const RADIOACTIVE_VIAL = "Radioactive Vial";
+export const MAGMA_CORE = "Magma Core";
+export const CARMINE_DYE = "Carmine Dye";
+export const AQUAMARINE_DYE = "Aquamarine Dye";
+export const ICEBERG_DYE = "Iceberg Dye";
+export const MIDNIGHT_DYE = "Midnight Dye";
+export const PERIWINKLE_DYE = "Periwinkle Dye";
+export const BONE_DYE = "Bone Dye";
+export const MUSIC_RUNE = "Music Rune I";

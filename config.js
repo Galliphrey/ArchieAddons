@@ -47,15 +47,6 @@ class Settings {
     mfdropAlertVIAL = false
 
     @SwitchProperty({
-        name: `${RED}${BOLD}Jawbus Death ${RESET}Hider`,
-        description: "Hides Jawbus death messages in chat (only for you).",
-        category: "Fishing",
-        subcategory: "Hiders",
-        placeholder: "Activate"
-    })
-    jawbusMessageHider = false
-
-    @SwitchProperty({
         name: `Entity ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
         description: "Renders a ESP-Box around your selection of Entities.",
         category: "ESP",
