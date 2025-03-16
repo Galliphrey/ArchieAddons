@@ -32,12 +32,12 @@ register('renderWorld', () => {
       World.getAllEntitiesOfType(EntityArmorStand).forEach((stand) => {
           let name = stand.getName().removeFormatting().toLowerCase();
             if (targetEntities.some(entity => name.includes(entity)) && !name.includes(" 0❤")) {
-              if (name.includes("dummy" || "lord jawbus")) {
+              if (name.includes("dummy") || name.includes("lord jawbus")) {
                 // iron golem entity
                 width = 2;
                 height = 3;
                 depth = 1;
-              } else if (name.includes("old wolf" || "wolf")) {
+              } else if (name.includes("old wolf") || name.includes("wolf")) {
                 // dog entity
                 width = 2;
                 height = 1;
@@ -47,11 +47,16 @@ register('renderWorld', () => {
                 width = 1;
                 height = 3;
                 depth = 1;
+              } else if (name.includes("spider") || name.includes("arachne")) {
+                // spider entity
+                width = 1;
+                height = 1;
+                depth = 1;
               } else {
                 width = 1;
                 height = 2;
                 depth = 1;
-              }
+              };
 
 
               RenderLibV2.drawEspBoxV2(
@@ -73,4 +78,4 @@ register('renderWorld', () => {
         });
     };
 });
-console.log('Skaro >>> Slayer ESP Loaded.');
+console.log('Skaro >>> Entity ESP Loaded.');

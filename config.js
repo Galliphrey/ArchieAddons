@@ -62,7 +62,7 @@ class Settings {
         subcategory: "who?",
         placeholder: "Activate"
     })
-    slayerEspBox = false
+    slayerEspBox = true
 
     @SwitchProperty({
         name: `Corpse ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
