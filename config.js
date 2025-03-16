@@ -62,10 +62,10 @@ class Settings {
 
     @TextProperty({
         name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Entities`,
-        description: `Type in entities to add to the Entity ESP feature.\n${UNDERLINE}Separate with commas.\n${RED}${BOLD}/ct load to apply changes.`,
+        description: `Type in entities to add to the Entity ESP feature.\n${RED}${BOLD}${UNDERLINE}Separate with commas.`,
         category: 'ESP',
         subcategory: 'who?',
-        placeholder: `jawbus,old wolf,milenia-aged blaze`,
+        placeholder: `Type Mob Names here!`,
         triggerActionOnInitialization: false,
     })
     espList = '';
