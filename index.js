@@ -6,7 +6,7 @@ import './features/esp-boxrender/slayerEsp';
 import './features/esp-boxrender/starredmobEsp';
 
 
-const welcomeMessage = new TextComponent(`\n${BOLD}${GOLD}[${LIGHT_PURPLE}ArchieAddons${GOLD}]${RESET} Loaded!${RESET}`).setHoverValue(`Click to open the ArchieAddons GUI.`).setClick("run_command", "/archieaddons");
+const welcomeMessage = new TextComponent(`\n${BOLD}${GOLD}[${LIGHT_PURPLE}Calzone CLient${GOLD}]${RESET} Loaded!${RESET}`).setHoverValue(`Click to open the Calzone Client GUI.`).setClick("run_command", "/calzone");
 
 register("gameload", (user) => {
     ChatLib.chat(welcomeMessage);
@@ -14,7 +14,7 @@ register("gameload", (user) => {
 
 register("command", (user) => {
     Settings.openGUI();    
-}).setName("archieaddons").setAliases("notarat","aa","skaro");
+}).setName("calzone").setAliases("notarat","cc");
 
 register("command", (user) => {
     let world = World.getWorld();

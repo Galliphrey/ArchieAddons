@@ -84,4 +84,4 @@ register('renderWorld', () => {
         });
     };
 });
-console.log('Skaro >>> Starred Mob ESP Loaded.');
+console.log('Calzone Client >>> Starred Mob ESP Loaded.');

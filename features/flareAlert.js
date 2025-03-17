@@ -17,7 +17,4 @@ register('actionBar', () => {
         }
     }
 }).setCriteria(/.+\(Deploy\).+/);
-console.log('Skaro >>> Flare Alert Loaded.')
-
-//export default flareTimer;
-//function flareTimer() {};
+console.log('Calzone CLient >>> Flare Alert Loaded.')

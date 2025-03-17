@@ -1,5 +1,5 @@
-# **Archie Addons !!**
-The greatest mod to ever exist.
+# **Calzone Client**
+For all the fattys of the world! :pregnant_man:
 
 ## Features
 <details>

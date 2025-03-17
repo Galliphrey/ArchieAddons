@@ -87,4 +87,4 @@ register('renderWorld', () => {
         });
     };
 });
-console.log('Skaro >>> Slayer ESP Loaded.');
+console.log('Calzone Client >>> Slayer ESP Loaded.');

@@ -86,4 +86,4 @@ register('renderWorld', () => {
         });
     };
 });
-console.log('Skaro >>> Entity ESP Loaded.');
+console.log('Calzone Client >>> Entity ESP Loaded.');

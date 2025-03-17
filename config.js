@@ -12,7 +12,7 @@ import {
 } from 'Vigilance';
 import './misc/formatting';
 
-@Vigilant('ArchieAddons', 'ArchieAddons', {
+@Vigilant('Calzone Client', 'Calzone CLient', {
     getCategoryComparator: () => (a, b) => {
 
         const categories = ['Fishing', 'ESP'];
