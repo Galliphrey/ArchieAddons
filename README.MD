@@ -30,6 +30,7 @@ For all the fattys of the world! :pregnant_man:
 
 * When turned on this feature will detect any lava spots where it is possible to catch flaming worms.
 </details>
+
 ## Commands
 - `/aa` Opens the ArchieAddons config.
 
