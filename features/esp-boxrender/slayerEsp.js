@@ -80,7 +80,7 @@ register('renderWorld', () => {
                     renderColor.green,
                     renderColor.blue,
                     Settings.espOpacity,
-                    true,
+                    Settings.cheaterEsp,
                     Settings.espThickness * 10
                   );
               };

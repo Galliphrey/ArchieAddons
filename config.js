@@ -43,15 +43,6 @@ class Settings {
     flareTimerAlert = false
 
     @SwitchProperty({
-        name: `${LIGHT_PURPLE}${BOLD}Radioactive${RESET} ${GREEN}${BOLD}Vial ${RESET}Drop Alert`,
-        description: "Makes a title when you drop a Radioactive Vial",
-        category: "Fishing",
-        subcategory: "Drop Alerts",
-        placeholder: "Activate"
-    })
-    mfdropAlertVIAL = false
-
-    @SwitchProperty({
         name: `Entity ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
         description: "Renders a ESP-Box around your selection of Entities.",
         category: "ESP",
@@ -115,13 +106,22 @@ class Settings {
     })
     espType = 0;
 
+    @SwitchProperty({
+        name: `Want ${LIGHT_PURPLE}${BOLD}ESP${RESET} to See THROUGH Walls?`,
+        description: `Makes the esp work through walls\n${RED}${BOLD}${UNDERLINE}USE AT YOUR OWN RISK: THIS IS CONSIDERED BANNABLE`,
+        category: "ESP",
+        subcategory: "Settings",
+        placeholder: "Activate"
+    })
+    cheaterEsp = false
+
     @PercentSliderProperty({
         name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Thickness`,
         description: `Select Thickness for your ESP-Box.\n${UNDERLINE}Each 10% is 1 Pixel`,
         category: 'ESP',
         subcategory: 'Settings',
     })
-    espThickness = 0.0;
+    espThickness = 1;
 
     @PercentSliderProperty({
         name: `${LIGHT_PURPLE}${BOLD}ESP${RESET} Opactiy`,
@@ -129,7 +129,7 @@ class Settings {
         category: 'ESP',
         subcategory: 'Settings',
     })
-    espOpacity = 0.0;
+    espOpacity = 1;
 
     constructor() {
         this.initialize(this);
