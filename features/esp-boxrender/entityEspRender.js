@@ -78,7 +78,7 @@ register('renderWorld', () => {
                 renderColor.green,
                 renderColor.blue,
                 Settings.espOpacity,
-                true,
+                Settings.cheaterEsp,
                 Settings.espThickness * 10
               );
             };
@@ -86,4 +86,4 @@ register('renderWorld', () => {
         });
     };
 });
-console.log('Skaro >>> Entity ESP Loaded.');
+console.log('Archie Addons >>> Entity ESP Loaded.');

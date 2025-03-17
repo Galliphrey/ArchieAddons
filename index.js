@@ -6,7 +6,7 @@ import './features/esp-boxrender/slayerEsp';
 import './features/esp-boxrender/starredmobEsp';
 
 
-const welcomeMessage = new TextComponent(`\n${BOLD}${GOLD}[${LIGHT_PURPLE}ArchieAddons${GOLD}]${RESET} Loaded!${RESET}`).setHoverValue(`Click to open the ArchieAddons GUI.`).setClick("run_command", "/archieaddons");
+const welcomeMessage = new TextComponent(`\n${BOLD}${GOLD}[${LIGHT_PURPLE}Archie Addons${GOLD}]${RESET} Loaded!${RESET}`).setHoverValue(`Click to open the Archie Addons GUI.`).setClick("run_command", "/archieaddons");
 
 register("gameload", (user) => {
     ChatLib.chat(welcomeMessage);
@@ -14,11 +14,22 @@ register("gameload", (user) => {
 
 register("command", (user) => {
     Settings.openGUI();    
-}).setName("archieaddons").setAliases("notarat","aa","skaro");
+}).setName("archie").setAliases("notarat","aa", "archieaddons", "araara");
 
 register("command", (user) => {
-    let world = World.getWorld();
-    console.log(world);
+    let scoreboard = Scoreboard.getLines();
+    scoreboard.forEach(line => {
+        let text = line.toString().removeFormatting(); // Convert to string and clean colors
+
+        if (text.includes("⏣")) { // Look for SkyBlock location marker
+            let worldName = text.replace("⏣", "").trim();
+
+            // Remove any non-standard characters (anything outside normal letters/numbers)
+            worldName = worldName.replace(/[^\x00-\x7F]/g, ""); 
+
+            console.log("You are in: " + worldName);
+        }
+    });
 }).setName("testcode");
 
 register("command", (user) => {

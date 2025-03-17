@@ -2,10 +2,7 @@ import { EntityArmorStand } from '../../misc/entities';
 import Settings from '../../config';
 import RenderLibV2 from '../../../RenderLibV2'
 
-targetEntities = [
-    "dummy",
-    "star"
-];
+targetEntities = "✯";
 
 const Color = Java.type("java.awt.Color");
 const colours = [
@@ -39,8 +36,8 @@ register('renderWorld', () => {
       const renderColor = colours[index];
       World.getAllEntitiesOfType(EntityArmorStand).forEach((stand) => {
           let name = stand.getName().removeFormatting().toLowerCase();
-            if (targetEntities.some(entity => name.includes(entity)) && !name.includes(" 0❤")) {
-              if (name.includes("golem") || name.includes("dummy")) {
+            if (name.includes(targetEntities) && !name.includes(" 0❤")) {
+              if (name.includes("golem")) {
                 // iron golem entity
                 width = 2;
                 height = 3;
@@ -76,7 +73,7 @@ register('renderWorld', () => {
                 renderColor.green,
                 renderColor.blue,
                 Settings.espOpacity,
-                true,
+                Settings.cheaterEsp,
                 Settings.espThickness * 10
               );
             };
@@ -84,4 +81,4 @@ register('renderWorld', () => {
         });
     };
 });
-console.log('Skaro >>> Starred Mob ESP Loaded.');
+console.log('Archie Addons >>> Starred Mob ESP Loaded.');

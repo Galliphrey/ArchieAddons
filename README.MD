@@ -1,5 +1,5 @@
-# **Archie Addons !!**
-The greatest mod to ever exist.
+# **Archie Addons**
+For all the fattys of the world! :pregnant_man:
 
 ## Features
 <details>
@@ -35,4 +35,4 @@ The greatest mod to ever exist.
 - `/aa` Opens the ArchieAddons config.
 
 ## Bugs/Issues
-Report any issues to [@archie.1236](https://discord.com/users/682995242546495561) on discord.
+there aint none SON.

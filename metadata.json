@@ -1,7 +1,7 @@
 {
-  "name": "ArchieAddons",
-  "creator": "Archie",
-  "description": "Module designed to give PEAK Gameplay!",
+  "name": "Archie Addons",
+  "creator": "Archie", 
+  "description": "Uhhhhhhhhhh Stuff!",
   "entry": "index.js",
   "version": "1.0.1",
   "requires": ["Vigilance", "RenderLibV2", "sleep"]

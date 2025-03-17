@@ -80,11 +80,11 @@ register('renderWorld', () => {
                     renderColor.green,
                     renderColor.blue,
                     Settings.espOpacity,
-                    true,
+                    Settings.cheaterEsp,
                     Settings.espThickness * 10
                   );
               };
         });
     };
 });
-console.log('Skaro >>> Slayer ESP Loaded.');
+console.log('Archie Addons >>> Slayer ESP Loaded.');
