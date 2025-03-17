@@ -30,11 +30,9 @@ The greatest mod to ever exist.
 
 * When turned on this feature will detect any lava spots where it is possible to catch flaming worms.
 </details>
+
 ## Commands
 - `/aa` Opens the ArchieAddons config.
 
 ## Bugs/Issues
 Report any issues to [@archie.1236](https://discord.com/users/682995242546495561) on discord.
-=======
-# Bugs/Issues
-Report any issues to @archie.1236 on discord.
