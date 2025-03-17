@@ -14,7 +14,7 @@ register("gameload", (user) => {
 
 register("command", (user) => {
     Settings.openGUI();    
-}).setName("archie").setAliases("notarat","aa", "archieaddons");
+}).setName("archie").setAliases("notarat","aa", "archieaddons", "araara");
 
 register("command", (user) => {
     let world = World.getWorld();
