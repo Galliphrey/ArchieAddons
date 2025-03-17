@@ -31,17 +31,12 @@ const type = [
     RenderLibV2.drawInnerBaritoneEspBoxV2
 ]
 
-
 // it works but for every boss, below are attempts ive tried to get it to only work on MY boss
 // it results in the entire thing breaking :/
 
 // && name.includes(`Spawned by: ${Player.getName()}`)
 
 //name.includes(' 0❤') && (name.includes('Horror') || name.includes('Packmaster') || name.includes('Broodfather') || name.includes('Seraph') || name.includes('Demonlord') || name.includes('Bloodfiend'))
-
-// 
-
-
 
 let width = 0;
 let height = 0;
