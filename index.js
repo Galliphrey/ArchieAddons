@@ -17,8 +17,19 @@ register("command", (user) => {
 }).setName("archie").setAliases("notarat","aa", "archieaddons", "araara");
 
 register("command", (user) => {
-    let world = World.getWorld();
-    console.log(world);
+    let scoreboard = Scoreboard.getLines();
+    scoreboard.forEach(line => {
+        let text = line.toString().removeFormatting(); // Convert to string and clean colors
+
+        if (text.includes("⏣")) { // Look for SkyBlock location marker
+            let worldName = text.replace("⏣", "").trim();
+
+            // Remove any non-standard characters (anything outside normal letters/numbers)
+            worldName = worldName.replace(/[^\x00-\x7F]/g, ""); 
+
+            console.log("You are in: " + worldName);
+        }
+    });
 }).setName("testcode");
 
 register("command", (user) => {

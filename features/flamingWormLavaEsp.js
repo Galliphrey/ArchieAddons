@@ -31,8 +31,13 @@ register('renderWorld', () => {
         let area = world ? ChatLib.removeFormatting(world).split(" ").slice(1).join(" ") : null;
         
         if (area === " Crystal Hollows") {
-            console.log(`In the Crystal Hollows!`)
-            console.log(World.getBlockAt(513,64,513))
+            for (let x = 513; x <= 823; x++) {
+                for (let z = 513; z <= 823; z++) {
+                    for (let y = 64; y <= 186; y++) {
+                        // code
+                    }
+                }
+            }
         } else {
             return
         };
