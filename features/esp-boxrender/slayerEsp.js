@@ -87,4 +87,4 @@ register('renderWorld', () => {
         });
     };
 });
-console.log('Calzone Client >>> Slayer ESP Loaded.');
+console.log('Archie Addons >>> Slayer ESP Loaded.');

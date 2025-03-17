@@ -17,4 +17,4 @@ register('actionBar', () => {
         }
     }
 }).setCriteria(/.+\(Deploy\).+/);
-console.log('Calzone CLient >>> Flare Alert Loaded.')
+console.log('Archie Addons >>> Flare Alert Loaded.')

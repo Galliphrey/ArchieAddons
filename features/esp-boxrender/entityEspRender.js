@@ -86,4 +86,4 @@ register('renderWorld', () => {
         });
     };
 });
-console.log('Calzone Client >>> Entity ESP Loaded.');
+console.log('Archie Addons >>> Entity ESP Loaded.');

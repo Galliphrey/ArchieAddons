@@ -84,4 +84,4 @@ register('renderWorld', () => {
         });
     };
 });
-console.log('Calzone Client >>> Starred Mob ESP Loaded.');
+console.log('Archie Addons >>> Starred Mob ESP Loaded.');
