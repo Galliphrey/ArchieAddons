@@ -40,6 +40,11 @@ register('renderWorld', () => {
       World.getAllEntitiesOfType(EntityArmorStand).forEach((stand) => {
           let name = stand.getName().removeFormatting().toLowerCase();
             if (targetEntities.some(entity => name.includes(entity)) && !name.includes(" 0❤")) {
+              /*TODO: Make sections for:
+               - Ghast
+               - Slime
+               - Hellwisp ETC
+              */
               if (name.includes("dummy") || name.includes("lord jawbus")) {
                 // iron golem entity
                 width = 2;
