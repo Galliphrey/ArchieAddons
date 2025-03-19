@@ -11,6 +11,24 @@ import { LIGHT_PURPLE, BLUE, BOLD, RED, RESET, GOLD } from '../misc/formatting';
 */
 
 // Creating all variables
+// bazaar api (WILLIT WORK?!?)
+(async () => {
+    const response = await fetch("https://api.hypixel.net/skyblock/bazaar");
+    const bazaarResponse = await response.json();
+  
+    let ids = [];
+    let sellPrices = [];
+    let buyPrices = [];
+  
+    Object.values(bazaarResponse.products).forEach(product => {
+      ids.push(product.product_id);
+      sellPrices.push(product.quick_status.sellPrice);
+      buyPrices.push(product.quick_status.buyPrice);
+    });
+  
+    console.log(ids, sellPrices, buyPrices);
+  })();
+
 // dungeons
 let floor_1_meter = 1;
 let floor_2_meter = 2;
