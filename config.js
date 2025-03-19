@@ -34,15 +34,6 @@ import './misc/formatting';
 class Settings {
 
     @SwitchProperty({
-        name: `Flaming Worm ${LIGHT_PURPLE}${BOLD}ESP${RESET}`,
-        description: `Finds lava blocks in the Precursor Remnants\n${RED}${BOLD}${UNDERLINE}USE AT YOUR OWN RISK: THIS IS CONSIDERED BANNABLE`,
-        category: "Structures",
-        subcategory: "Finding",
-        placeholder: "Activate"
-    })
-    flamingWormEsp = false
-
-    @SwitchProperty({
         name: `${RED}${BOLD}Flare ${RESET}Timer`,
         description: "Makes a title when your flare expires",
         category: "Fishing",
