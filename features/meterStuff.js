@@ -12,7 +12,7 @@ import { LIGHT_PURPLE, BLUE, BOLD, RED, RESET, GOLD } from '../misc/formatting';
 
 // Creating all variables
 // bazaar api (WILLIT WORK?!?)
-(async () => {
+async function bazaarAPI() {
     const response = await fetch("https://api.hypixel.net/skyblock/bazaar");
     const bazaarResponse = await response.json();
   
@@ -27,7 +27,7 @@ import { LIGHT_PURPLE, BLUE, BOLD, RED, RESET, GOLD } from '../misc/formatting';
     });
   
     console.log(ids, sellPrices, buyPrices);
-  })();
+};
 
 // dungeons
 let floor_1_meter = 1;
@@ -67,6 +67,11 @@ const nucMessage = new TextComponent(`${LIGHT_PURPLE}Archie Addons${GOLD} >>> ${
 
 
 // Setting commands up
+register('command', (floor) => {
+    if (floor === 'f1') {}
+});
+// idea, probably wont use (above)
+
 register("command", (user) => {
     ChatLib.chat(dungMessage)
 }).setName("dungeonmeter").setAliases("dungmeter");
