@@ -4,5 +4,5 @@
   "description": "Uhhhhhhhhhh Stuff!",
   "entry": "index.js",
   "version": "1.0.1",
-  "requires": ["Vigilance", "RenderLibV2", "sleep"]
+  "requires": ["Vigilance", "RenderLibV2", "sleep", "Krun"]
 }

@@ -1,6 +1,11 @@
-import Settings from '../config'
-import sleep  from 'sleep'
+import { Huds } from '../../Krun/Huds';
 
-if (Settings.blockSwapper) {
+/* TODO:
 
-};
+ * Make a something that uses Krun gui
+ * Spirit mask timer maybe?!?!?
+ * ff timer for m3??
+ * timer + title for first stun in m4 ???
+ * oooh make a timer for flare thing!
+
+*/
