@@ -4,7 +4,8 @@ import './features/flareAlert';
 import './features/esp-boxrender/entityEspRender';
 import './features/esp-boxrender/slayerEsp';
 import './features/esp-boxrender/starredmobEsp';
-import './features/meterStuff';
+import './features/newFeature';
+
 
 const welcomeMessage = new TextComponent(`${BOLD}${GOLD}[${LIGHT_PURPLE}Archie Addons${GOLD}]${RESET} Loaded!${RESET}`).setHoverValue(`Click to open the Archie Addons GUI.`).setClick("run_command", "/archieaddons");
 
@@ -53,8 +54,6 @@ const dungMessage = new TextComponent(`${LIGHT_PURPLE}Archie Addons${GOLD} >>> $
 register("command", (user) => {
     ChatLib.chat(dungMessage);
 }).setName("testmeter");
-
-
 
 //     const newMessage = new Message(`${DARK_PURPLE}${OBFUSCATED}AAA${RESET}${GOLD}♆♆♆ ${RESET}${GREEN}+500 Aura${RESET} ${GOLD}♆♆♆${RESET}${DARK_PURPLE}${OBFUSCATED}AAA${RESET}`)
 // the amount of dashes to span all of chat: ----------------------------------------------------

@@ -65,6 +65,16 @@ register('renderWorld', () => {
                 width = 1;
                 height = 1;
                 depth = 1;
+              } else if (name.includes("ghast")) {
+                // ghast entity
+                width = 5;
+                height = 5;
+                depth = 5;
+              } else if (name.includes("slime")) {
+                // slime entity
+                width = 4;
+                height = 4;
+                depth = 4;
               } else {
                 width = 1;
                 height = 2;
