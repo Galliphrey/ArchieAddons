@@ -132,15 +132,6 @@ class Settings {
     espOpacity = 0;
 
     @SwitchProperty({
-        name: `Log P Names`,
-        description: `Testing feature IGNORE`,
-        category: "erm?",
-        subcategory: "",
-        placeholder: "Activate"
-    })
-    packetLog = false
-
-    @SwitchProperty({
         name: `block changarooni`,
         description: `Testing feature IGNORE`,
         category: "erm?",
