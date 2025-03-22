@@ -35,7 +35,7 @@ class Settings {
 
     @SwitchProperty({
         name: `${RED}${BOLD}Flare ${RESET}Timer`,
-        description: "Makes a title when your flare expires",
+        description: "Makes a title when your flare expires\nSlightly bugged rn\n(has a overlay but u need to /ct load to turn it on/off)\n W.I.P.!",
         category: "Fishing",
         subcategory: "Notifiers",
         placeholder: "Activate"
@@ -89,15 +89,6 @@ class Settings {
     starmobEspBox = false
 
     @SelectorProperty({
-        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Colour`,
-        description: "Select the colour of the ESP-Box.",
-        category: "ESP",
-        subcategory: "Settings",
-        options: ['Magenta', 'Red', 'Cyan', 'Blue', 'Green', 'Yellow', 'Orange', 'White', 'Black', 'Pink'],
-    })
-    espColour = 0;
-
-    @SelectorProperty({
         name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Style`,
         description:`Select the Type of ESP-Box you want!`,
         category:`ESP`,
@@ -105,6 +96,14 @@ class Settings {
         options: ['Normal ESP-Box','Inner ESP-Box','Baritone ESP-Box','Inner Baritone ESP-Box'],
     })
     espType = 0;
+
+    @ColorProperty({
+        name:`${LIGHT_PURPLE}${BOLD}ESP${RESET} Colour`,
+        description: "Select the colour of the ESP-Box.",
+        category: "ESP",
+        subcategory: "Settings"
+    })
+    espColour = Color.MAGENTA
 
     @SwitchProperty({
         name: `Want ${LIGHT_PURPLE}${BOLD}ESP${RESET} to See THROUGH Walls?`,
@@ -131,6 +130,7 @@ class Settings {
     })
     espOpacity = 0;
 
+/*
     @SwitchProperty({
         name: `block changarooni`,
         description: `Testing feature IGNORE`,
@@ -139,6 +139,7 @@ class Settings {
         placeholder: "Activate"
     })
     blockSwapper = false
+*/
 
     constructor() {
         this.initialize(this);

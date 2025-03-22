@@ -4,7 +4,7 @@ import './features/flareAlert';
 import './features/esp-boxrender/entityEspRender';
 import './features/esp-boxrender/slayerEsp';
 import './features/esp-boxrender/starredmobEsp';
-import './features/newFeature';
+import './features/guiConfig';
 
 
 const welcomeMessage = new TextComponent(`${BOLD}${GOLD}[${LIGHT_PURPLE}Archie Addons${GOLD}]${RESET} Loaded!${RESET}`).setHoverValue(`Click to open the Archie Addons GUI.`).setClick("run_command", "/archieaddons");
@@ -57,3 +57,15 @@ register("command", (user) => {
 
 //     const newMessage = new Message(`${DARK_PURPLE}${OBFUSCATED}AAA${RESET}${GOLD}♆♆♆ ${RESET}${GREEN}+500 Aura${RESET} ${GOLD}♆♆♆${RESET}${DARK_PURPLE}${OBFUSCATED}AAA${RESET}`)
 // the amount of dashes to span all of chat: ----------------------------------------------------
+
+register("command", (user) => {
+    const colorString = `${Settings.myColor}`; // Convert the object to a string
+    const regex = /r=(\d+),g=(\d+),b=(\d+)/; // Regular expression to match r, g, and b values
+    const match = colorString.match(regex);
+    
+    if (match) {
+        const r = parseInt(match[1], 10);
+        const g = parseInt(match[2], 10);
+        const b = parseInt(match[3], 10);
+    };
+}).setName("colour");
