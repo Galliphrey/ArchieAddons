@@ -26,9 +26,9 @@ For all the fattys of the world! :pregnant_man:
 * Sends a title on screen when your flare expires (Alert, Warning, SOS)
 </details>
 <details>
-<summary>Flaming Worms ESP</summary>
+<summary>Gui</summary>
 
-* When turned on this feature will detect any lava spots where it is possible to catch flaming worms.
+* Atm we have 1 overlay, that being the Flare Alert overlay. More will be added as we add more features!
 </details>
 
 ## Commands
