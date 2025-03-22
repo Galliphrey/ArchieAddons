@@ -1,11 +1,3 @@
-# 1.0.2
-
-*Added*
-Flaming Worm ESP
-
-*Updated/Bug Fixes*
-Nothing :)
-
 # 1.0.1
 
 *Added*
