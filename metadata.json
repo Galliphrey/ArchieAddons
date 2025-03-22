@@ -3,6 +3,6 @@
   "creator": "Archie", 
   "description": "Uhhhhhhhhhh Stuff!",
   "entry": "index.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "requires": ["Vigilance", "RenderLibV2", "sleep", "Krun", "PogData"]
 }
