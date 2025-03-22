@@ -3,6 +3,7 @@ import sleep  from 'sleep'
 import { DARK_RED, RED } from '../misc/formatting'
 
 let flareActive = false;
+export let isActive = { value: flareActive};
 register('actionBar', () => {
     if (Settings.flareTimerAlert) {
         if (!flareActive) {
