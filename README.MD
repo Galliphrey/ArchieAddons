@@ -33,6 +33,7 @@ For all the fattys of the world! :pregnant_man:
 
 ## Commands
 - `/aa` Opens the ArchieAddons config.
+- `/crypt` Sends a skycrypt link for whichever ign you input.
 
 ## Bugs/Issues
 there aint none SON.

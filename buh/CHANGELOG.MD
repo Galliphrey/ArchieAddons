@@ -1,3 +1,13 @@
+# 1.0.2
+
+*Added*
+Colour picker functionality
+Guis
+Crypt command
+
+*Updated/Bug Fixes*
+far too many memory leaks were patched :/
+
 # 1.0.1
 
 *Added*
