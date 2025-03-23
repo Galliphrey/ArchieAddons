@@ -1,22 +1,25 @@
 import { EntityArmorStand } from '../../misc/entities';
 import Settings from '../../config';
 import RenderLibV2 from '../../../RenderLibV2'
+import { parseRGB } from './entityEspRender';
 
-targetEntities = "✯";
 
-const Color = Java.type("java.awt.Color");
-const colours = [
-    RenderLibV2.getColor(Color.MAGENTA),
-    RenderLibV2.getColor(Color.RED),
-    RenderLibV2.getColor(Color.CYAN),
-    RenderLibV2.getColor(Color.BLUE),
-    RenderLibV2.getColor(Color.GREEN),
-    RenderLibV2.getColor(Color.YELLOW),
-    RenderLibV2.getColor(Color.ORANGE),
-    RenderLibV2.getColor(Color.WHITE),
-    RenderLibV2.getColor(Color.BLACK),
-    RenderLibV2.getColor(Color.PINK)
-]
+const targetEntities = ["✯"];
+// Declare r, g, and b outside the block so they are accessible globally
+let r = 255, g = 255, b = 255; // Default to white in case the regex doesn't match
+
+// Entity dimensions mapping
+const entityDimensions = {
+    "dummy": { width: 2, height: 3, depth: 1 },
+    "mimic": { width: 1, height: 1.5, depth: 1 },
+    "fels": { width: 1, height: 3, depth: 1 },
+    "spider": { width: 2, height: 1, depth: 2 },
+    "bat": { width: 1, height: 1, depth: 1 },
+};
+
+// Default dimensions
+const defaultDimensions = { width: 1, height: 2, depth: 1 };
+
 const type = [
     RenderLibV2.drawEspBoxV2,
     RenderLibV2.drawInnerEspBoxV2,
@@ -24,61 +27,38 @@ const type = [
     RenderLibV2.drawInnerBaritoneEspBoxV2
 ]
 
-
-// have these set to certain values based on the entity
-let width = 0;
-let height = 0;
-let depth = 0;
-
 register('renderWorld', () => {
     if (Settings.starmobEspBox) {
-      let index = Settings.espColour;
-      const renderColor = colours[index];
-      World.getAllEntitiesOfType(EntityArmorStand).forEach((stand) => {
-          let name = stand.getName().removeFormatting().toLowerCase();
-            if (name.includes(targetEntities) && !name.includes(" 0❤")) {
-              if (name.includes("golem")) {
-                // iron golem entity
-                width = 2;
-                height = 3;
-                depth = 1;
-              } else if (name.includes("mimic")) {
-                width = 1;
-                height = 1.5;
-                depth = 1;
-              } else if (name.includes("fels")) {
-                // enderman entity
-                width = 1;
-                height = 3;
-                depth = 1;
-              } else if (name.includes("spider") || name.includes("bat")) {
-                // spider entity
-                width = 1;
-                height = 1;
-                depth = 1;
-              } else {
-                width = 1;
-                height = 2;
-                depth = 1;
-              };
+      // Dynamically extract RGB values from Settings.myColor
+      const { r, g, b } = parseRGB(`${Settings.espColour}`);
 
-              type[Settings.espType](
-                stand.getRenderX(),
-                stand.getRenderY() - height,
-                stand.getRenderZ(),
-                width,
-                height,
-                depth,
-                renderColor.red,
-                renderColor.green,
-                renderColor.blue,
-                Settings.espOpacity,
-                Settings.cheaterEsp,
-                Settings.espThickness * 10
-              );
-            };
-          
-        });
-    };
-});
+    // Process all armor stands
+    World.getAllEntitiesOfType(EntityArmorStand).forEach((stand) => {
+        const name = stand.getName().removeFormatting().toLowerCase();
+
+        // Skip entities not in the target list or with "0❤"
+        if (!targetEntities.some(entity => name.includes(entity)) || name.includes(" 0❤")) return;
+
+          // Get dimensions for the entity
+          const dimensions = Object.keys(entityDimensions).find(key => name.includes(key)) 
+              ? entityDimensions[Object.keys(entityDimensions).find(key => name.includes(key))]
+              : defaultDimensions;
+
+          // Render ESP box
+          type[Settings.espType](
+              stand.getRenderX(),
+              stand.getRenderY() - dimensions.height,
+              stand.getRenderZ(),
+              dimensions.width,
+              dimensions.height,
+              dimensions.depth,
+              r / 255,
+              g / 255,
+              b / 255,
+              Settings.espOpacity,
+              Settings.cheaterEsp,
+              Settings.espThickness * 10
+          );
+    });
+}});
 console.log('Archie Addons >>> Starred Mob ESP Loaded.');

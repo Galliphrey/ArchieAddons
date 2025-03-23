@@ -30,7 +30,7 @@ const entityDimensions = {
 const defaultDimensions = { width: 1, height: 2, depth: 1 };
 
 // Helper function to parse RGB values from Settings.myColor
-function parseRGB(colorString) {
+export function parseRGB(colorString) {
     const regex = /r=(\d+),g=(\d+),b=(\d+)/;
     const match = colorString.match(regex);
     return match ? {
@@ -49,11 +49,6 @@ register('renderWorld', () => {
     // Dynamically fetch and process the target entities list
     const entityListESP = Settings.espList.toLowerCase();
     const targetEntities = entityListESP.split(",").filter(entity => entity.trim() !== "");
-
-    // Cache other settings
-    const espType = type[Settings.espType];
-    const opacity = Settings.espOpacity;
-    const thickness = Settings.espThickness * 10;
 
     // Process all armor stands
     World.getAllEntitiesOfType(EntityArmorStand).forEach((stand) => {
@@ -84,5 +79,4 @@ register('renderWorld', () => {
         );
     });
 });
-
 console.log('Archie Addons >>> Entity ESP Loaded.');
