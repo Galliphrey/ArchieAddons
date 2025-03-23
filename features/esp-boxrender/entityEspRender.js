@@ -79,5 +79,4 @@ register('renderWorld', () => {
         );
     });
 });
-
 console.log('Archie Addons >>> Entity ESP Loaded.');
