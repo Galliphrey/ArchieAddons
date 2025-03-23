@@ -4,7 +4,6 @@ import sleep  from 'sleep';
 import Settings from '../config';
 import { isActive } from './flareAlert';
 
-
 /* TODO:
 
  * Make a something that uses Krun gui
